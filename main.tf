@@ -9,12 +9,12 @@ terraform {
    }
 
 provider "aws" {
-        # region = "us-east-1" 
+        region = "us-west-1" 
         profile = "default"
 	}
 
 resource "aws_instance" "tfCICDinstance" {
 	ami = "ami-0dc2d3e4c0f9ebd18" 
-  count = 3
+  # count = 3
 	instance_type = "t2.micro"
 }
